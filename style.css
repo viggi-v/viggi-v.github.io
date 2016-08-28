@@ -59,7 +59,7 @@ a{
     text-align: center;
     padding: 10px;
 }
-#interests ul li {
+li.col {
 	padding:10px;
     display: block;
     float: left;
@@ -73,18 +73,12 @@ div#skills {
     padding: 10px;
     text-align: center;
 }
-div#contact {
-    height: 200px;
-    width: 70%;
-    margin: 0px auto;
-    text-align: center;
-}
-#contact .left {
+footer .left {
     display: block;
     float: left;
     width: 50%;
 }
-#contact .right {
+footer .right {
     display: block;
     float: left;
     width: 50%;
@@ -95,4 +89,37 @@ div#contact {
 footer {
     width: 100%;
     background-color: gainsboro;
+    overflow: hidden;
+    padding-left: 15%;
+    text-align:center;
+    border-top: 1px solid #b3b3b3;
+}
+
+
+/* Media Queries
+   Mobile is assumed to have max width of 1081px 
+  */
+@media only screen and (max-width:1081px){
+	.col{
+		width:100% !important;
+		height:100% !important;
+		float: none !important;
+	}
+	.interest img {
+		width: 60% !important;
+		height:60% !important;
+    	border-radius: 30% !important;
+	}
+	.interest .text_holder {
+    	text-align: center;
+    	padding: 30px!important;
+    	font-size: 36px!important;
+	}
+	footer{
+		padding-left:0px !important;
+	}
+	footer div{
+		font-size:30px !important;
+		padding-top:20px;
+	}
 }
