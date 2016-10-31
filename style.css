@@ -1,0 +1,125 @@
+@font-face{
+	font-family: titlefont;
+	src:url(mensch.ttf);
+}
+@keyframes blinker {  
+  50% { opacity: 0.0; }
+}
+a{
+	text-decoration: none;
+    color: #d29639;
+}
+*{
+	box-sizing: border-box;
+	padding:0px;
+	margin: 0px;
+	font-family: titlefont;
+}
+
+#home{
+	height:100vh;
+	width:100%;
+}
+.blinking{
+	animation: blinker 1s linear infinite;
+
+}
+.title_text {
+    font-size: 96px;
+    position:absolute;
+    margin-top: 50vh;
+    margin-left: 10%;
+    transform: translateY(-50%);
+}
+.center_title {
+    text-align: center;
+    padding: 30px;
+    font-size: 60px;
+}
+.short_para {
+    text-align: center;
+}
+.profile p {
+    text-align: center;
+    padding: 10px;
+    font-size: 24px;
+}
+.interest{
+	position: relative;
+}
+.interest img {
+    position: relative;
+    margin: 0px auto;
+    display: block;
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+}
+.interest .text_holder {
+    text-align: center;
+    padding: 10px;
+}
+li.col {
+	padding:10px;
+    display: block;
+    float: left;
+    width: 33.33%;
+    height:250px;
+}
+div#skills {
+    clear: both;
+}
+#skills li {
+    padding: 10px;
+    text-align: center;
+}
+footer .left {
+    display: block;
+    float: left;
+    width: 50%;
+}
+footer .right {
+    display: block;
+    float: left;
+    width: 50%;
+}
+.left div, .right div {
+    padding: 10px;
+}
+footer {
+    width: 100%;
+    background-color: gainsboro;
+    overflow: hidden;
+    padding-left: 15%;
+    text-align:center;
+    border-top: 1px solid #b3b3b3;
+}
+
+
+/* Media Queries
+   Mobile is assumed to have max width of 1081px 
+  */
+@media only screen and (max-width:1081px){
+	.col{
+		width:100% !important;
+		height:100% !important;
+		float: none !important;
+	}
+	.interest img {
+		width: 60% !important;
+		height:60% !important;
+    	border-radius: 30% !important;
+	}
+	.interest .text_holder {
+    	text-align: center;
+    	padding: 30px!important;
+    	font-size: 36px!important;
+	}
+	footer{
+		padding-left:0px !important;
+	}
+	footer div{
+		font-size:30px !important;
+		padding-top:20px;
+	}
+}
