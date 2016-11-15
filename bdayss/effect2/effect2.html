@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<style>
+		@font-face{
+			src:url(Exo-Bold.otf);
+			font-family: mainfont;
+		}
+		*{
+			box-sizing: border-box;
+			padding:0px;
+			margin: 0px;
+		}
+		.container{
+			width:100%;
+			height: 100vh;
+		}
+		.textbox{
+			color:transparent;
+			font-family: mainfont;
+			font-size: 72px;
+			position: relative;
+			top: 50%;
+			transform: translateY(-50%);
+			text-align: center;
+		}
+		.textbox span:hover{
+			transition-duration: 0.5s;
+			text-shadow:1px 1px #cdcdcd;
+		}
+		.textbox span{
+			text-shadow:4px 4px 10px #cdcdcd;
+			transition-duration: 0.5s;
+		}
+		body{
+			height: 200vh;
+		}
+	</style>
+	<script src="jq.js"></script>
+	<script>
+		function flipExit(){
+			$("span").css({"top":"100px", "position":"fixed","transition-duration":"2s all"});
+			console.log("HOO");
+		}
+		$(document).ready(function(){
+			$(window).scroll(function(){
+				//flipExit();
+			});
+		});
+	</script>
+</head>
+<body>
+	<!--
+		Trying to implement a shadow on hover 
+	-->
+	<div class="container">
+		<div id="text1" class="textbox">
+			<span>A</span>
+			<span>m</span>
+			<span>m</span>
+			<span>u</span>
+			<span>,</span>
+		</div>
+		<div class="textbox" id="text2">
+			<span>L</span>
+			<span>e</span>
+			<span>m</span>
+			<span>m</span>
+			<span> e </span>
+			<span>t</span>
+			<span>e</span>
+			<span>l</span>
+			<span>l </span>
+			<span> y</span>
+			<span>o</span>
+			<span>u</span>
+			<span>,</span>
+		</div>
+	</div>
+	
+</body>
+</html>
