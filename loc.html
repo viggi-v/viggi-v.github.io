@@ -12,6 +12,8 @@
 
 <script>
 var x = document.getElementById("demo");
+var pos;
+var responseData;
 
 function getLocation() {
     if (navigator.geolocation) {
@@ -22,10 +24,36 @@ function getLocation() {
 }
 
 function showPosition(position) {
-    x.innerHTML = "Latitude: " + position.coords.latitude + 
-    "<br>Longitude: " + position.coords.longitude;
+    pos = position;
+}
+function getUserAddress(){
+	if (navigator.geolocation) {
+		navigator.geolocation.getCurrentPosition(showPosition);
+		navigator.geolocation.getCurrentPosition(showPosition);
+
+		var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                responseData = JSON.parse(this.responseText);
+                extractData();
+            }
+        };
+        xmlhttp.open("POST","https://maps.googleapis.com/maps/api/geocode/json?latlng="+pos.coords.latitude+","+pos.coords.longitude+"&key=AIzaSyB0EOJUkftYMlfVA26mvQCvewkzhLXr5n0", true);
+        xmlhttp.send();
+
+    } else { 
+        x.innerHTML = "Geolocation is not supported by this browser.";
+    }
+}
+
+function extractData(){
+	document.getElementById("op").innerHTML+="<hr>"+responseData["results"][2]["formatted_address"];
+	console.log(responseData);
 }
 </script>
-
+<button onclick="getUserAddress()">Fuck Yeah!!</button>
+<div id="op">
+	
+</div>
 </body>
 </html>
