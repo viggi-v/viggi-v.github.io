@@ -8,59 +8,7 @@
 		<script src="js/jq.js"></script>
 		<script src="js/sgame.js"></script>
 		<!--script src="js/location.js"></script-->
-		<link rel="stylesheet" href="">
-		<style>
-			*{
-				box-sizing: border-box;
-				padding: 0px;
-				margin: 0px;
-			}
-			.welcomeContent{
-				height: 100vh;
-				width:100%;
-				background-color: #000;
-			}
-			.background{
-				height: 100vh;
-			}
-			#home{
-				overflow: hidden;
-			}
-			#scoreBoard{
-				color: white;
-				padding:20px;
-				font-size: 36px;
-				float: left;
-			}
-			#timeBoard{
-				width:50%;
-				padding: 20px;
-				position: relative;
-				float: right;
-			}
-			.banner{
-				width:75%;
-				height:15px;
-				position: absolute;
-				right:30px;
-			}
-			#timeLeft{
-				background-color: red;
-				width:0px;
-				z-index: 9;
-				
-			}
-			#timeStrip{
-				background-color:#cdcdcd;
-				z-index: 8;
-			}
-		</style>
-		<script>
-			$(document).ready(function(){
-				console.log(window.innerWidth+","+window.innerHeight);
-				  document.documentElement.style.overflow = 'hidden';
-			})
-		</script>
+		<link rel="stylesheet" href="res/sgame.css">
 	</head>
 	<body>
 		<div id="home" class="welcomeContent">
@@ -91,6 +39,5 @@
 			phone number.
 		</div!-->
 		<div id="op"></div>
-		
 	</body>
 </html>
