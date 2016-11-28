@@ -19,7 +19,7 @@ var stripSize;
  */
 var pixelSize = 14;
 
-var snake = { head: { x: 0, y: 0 }, keyPoints: [], sLength: 300 };
+var snake = { head: { x: 0, y: 0 }, keyPoints: [], sLength: 3 };
 
 /*    
     function fetch() {
