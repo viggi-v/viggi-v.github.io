@@ -14,7 +14,6 @@ var stripSize;
 var foodSize = 5;
 bigFoodSize = 15;
 var body_size = 7;
-var cycle_flag = 0;
 /* Caution 
  * =======
  * pixelSize is not what you think:
@@ -23,7 +22,7 @@ var cycle_flag = 0;
  */
 var pixelSize = 14;
 
-var snake = { head: { x: pixelSize/2, y: pixelSize/2 }, keyPoints: [], sLength: 3 };
+var snake = { head: { x: 0, y: 0 }, keyPoints: [], sLength: 3 };
 
 /*    
     function fetch() {
@@ -125,8 +124,8 @@ function resetTargets() {
     if(p[0]==0 && p[1]==128 && p[2]==0)
         resetTargets();
     
-    tx -= tx%pixelSize - pixelSize/2;
-    ty -= ty%pixelSize - pixelSize/2;
+    tx -= tx%pixelSize;
+    ty -= ty%pixelSize;
     //tx+=14;
     //ty+=14; 
 }
@@ -194,8 +193,6 @@ function updatePos() {
         snake.sLength++;
         updateScore();
     }
-
-    cycle_flag = 0;//reset cycle >.<
 }
 
 
@@ -316,35 +313,31 @@ $(document).ready(function() {
 
     //The event handlers
     Mousetrap.bind('up', function() {
-        if (dir != 'down' && !cycle_flag) {
+        if (dir != 'down') {
             if (dir != 'up')
                 addKeyPoint();
             dir = 'up';
-            cycle_flag = 1;
         }
     });
     Mousetrap.bind('down', function() {
-        if (dir != 'up' && !cycle_flag) {
+        if (dir != 'up') {
             if (dir != 'down')
                 addKeyPoint();
             dir = 'down';
-            cycle_flag = 1;
         }
     });
     Mousetrap.bind('right', function() {
-        if (dir != 'left' && !cycle_flag) {
+        if (dir != 'left') {
             if (dir != 'right')
                 addKeyPoint();
             dir = 'right';
-            cycle_flag = 1;
         }
     });
     Mousetrap.bind('left', function() {
-        if (dir != 'right' && !cycle_flag) {
+        if (dir != 'right') {
             if (dir != 'left')
                 addKeyPoint();
             dir = 'left';
-            cycle_flag = 1;
         }
     });
     Mousetrap.bind('space', function() {
@@ -356,3 +349,4 @@ $(document).ready(function() {
         }
     });
 });
+

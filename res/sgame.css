@@ -52,3 +52,27 @@
 canvas{
 	border: 2px solid white;
 }
+#game_over{
+	font-family: gameFont;
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	background-color: #cdcdcd;
+}
+.content_box{
+	border: 1px solid black;
+	border-radius: 10px;
+	width:30%;
+	position: absolute;
+	top:50%;
+	left:50%;
+	transform: translate(-50%,-50%);
+	background-color: rgba(0, 0, 0, 0.28);
+}
+.content_box ul{
+	list-style-type: none;
+}
+.content_box span{
+	display: block;
+	text-align: center;
+}
