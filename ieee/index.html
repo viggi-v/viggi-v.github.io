@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html ng-app="mainApp" ng-controller="mainController">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home|IEEE NITK</title>
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Prociono">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Vollkorn">
+    <link rel="stylesheet" href="res/main.css">
+    <link rel="stylesheet" href="res/jquery.fullpage.css">
+    <script type="text/javascript" src="js/ng/angular.min.js"></script>
+    <script type="text/javascript" src="js/ng/states.js"></script>
+    <script type="text/javascript" src="js/ng/controller.js"></script>
+    <script type="text/javascript" src="js/ng/ui-router.js"></script>
+    <script type="text/javascript" src="js/jq.js"></script>
+    <script type="text/javascript" src="js/jquery.fullpage.js"></script>
+    <script type="text/javascript" src="js/angular-fullpage.js"></script>
+</head>
+
+<body>
+    <nav id="menu" class="visible_nav">
+        <a ui-sref="home" title=""><img id="small_logo" src="res/img/ieee_white.png" alt=""></a>
+        <div class="parent">
+            <div class="nav-icon cross">
+                <div class="span"></div>
+            </div>
+        </div>
+    </nav>
+    <div class="full_screen_menu teco">
+        <div class="top_layer">
+            <div class="left_section">
+                <ul>
+                    <li>
+                        <div>
+                            <a ui-sref="team" title="">Full Team</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <a ui-sref="alumni" title="">Alumni Network</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="right_section">
+                <ul>
+                    <li>
+                        <div>
+                            <a ui-sref="achievements" title="">Achievements</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <a ui-sref="projects" title="">Our Projects</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="bottom_layer">
+            <div class="section_title">
+                Follow us on
+            </div>
+            <ul>
+                <li>
+                    <a href="#" title="">Blog</a>
+                </li>
+                <li>
+                    <a href="#" title="">Facebook</a>
+                </li>
+                <li>
+                    <a href="#" title="">LinkedIn</a>
+                </li>
+                <li>
+                    <a href="#" title="">GitHub</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div ui-view>
+    </div>
+</body>
+
+</html>
