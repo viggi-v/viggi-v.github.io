@@ -1,44 +1,41 @@
-{
-    "CompSoc": {
-    	"side" : "right",
+[
+    [{
+        "side": "right",
         "title": "Computer Science Society",
-        "img"  : "comps.jpg",
-        "info" : "Blaber about CompSoc in 2-3 sentance",
-        "id"   : "compsoc"
-    },
-    "Piston": {
-    	"side" : "left",
+        "img": "comps.jpg",
+        "info": "Blaber about CompSoc in 2-3 sentance",
+        "id": "compsoc"
+    }, {
+        "side": "left",
         "title": "Piston",
-        "img"  : "piston.jpg",
-        "info" : "Blaber about Piston in 2-3 sentance",
-        "id"   : "piston"
-    },
-    "CAS": {
-    	"side" : "right",
+        "img": "piston.jpg",
+        "info": "Blaber about Piston in 2-3 sentance",
+        "id": "piston"
+    }],
+    [{
+        "side": "right",
         "title": "Circuits and Systems in 2-3 sentance",
-        "img"  : "cas.jpg",
-        "info" : "Blaber about CAS",
-        "id"   : "cas"
-    },
-    "WIE": {
-    	"side" : "left",
+        "img": "cas.jpg",
+        "info": "Blaber about CAS",
+        "id": "cas"
+    }, {
+        "side": "left",
         "title": "Women in Engineering in 2-3 sentance",
-        "img"  : "sig.jpg",
-        "info" : "Blaber about WIE",
-        "id"   : "wie"
-    },
-    "Robotics": {
-    	"side" : "right",
+        "img": "sig.jpg",
+        "info": "Blaber about WIE",
+        "id": "wie"
+    }],
+    [{
+        "side": "right",
         "title": "Robotics",
-        "img"  : "sig.jpg",
-        "info" : "Blaber about Robotics in 2-3 sentance",
-        "id"   : "robotics"
-    },
-    "SIGHT": {
-    	"side" : "left",
+        "img": "sig.jpg",
+        "info": "Blaber about Robotics in 2-3 sentance",
+        "id": "robotics"
+    }, {
+        "side": "left",
         "title": "SIGHT",
-        "img"  : "sig.jpg",
-        "info" : "Blaber about SIGHT in 2-3 sentance",
-        "id"   : "sight"
-    }
-}
+        "img": "sig.jpg",
+        "info": "Blaber about SIGHT in 2-3 sentance",
+        "id": "sight"
+    }]
+]

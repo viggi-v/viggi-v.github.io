@@ -19,29 +19,31 @@
             </div>
         </div>
     </div>
-    <div class="sig section fp-auto-height prociono" ng-repeat="single_sig in sigs">
-        <a ui-sref="sig({id:single_sig.id})" title="{{single_sig.title}}">
-            <div class="card fly_up">
-                <div class="description fadein" ng-if="single_sig.side=='right'">
-                    <div class="content_desc">
-                        <h3>{{single_sig.title}}</h3>
-                        <p>
-                            {{single_sig.info}}
-                        </p>
-                    </div> 
+    <div class="sig section fp-auto-height prociono" ng-repeat="sig_group in sigs">
+        <div class="half_block" ng-repeat="single_sig in sig_group">
+            <a ui-sref="sig({id:single_sig.id})" title="{{single_sig.title}}">
+                <div class="card fly_up {{single_sig.side}}">
+                    <div class="description fadein" ng-if="single_sig.side=='right'">
+                        <div class="content_desc">
+                            <h3>{{single_sig.title}}</h3>
+                            <p>
+                                {{single_sig.info}}
+                            </p>
+                        </div>
+                    </div>
+                    <div class="pic">
+                        <img src="res/img/{{single_sig.img}}" alt="{{single_sig.title}}">
+                    </div>
+                    <div class="description fadein" ng-if="single_sig.side=='left'">
+                        <div class="content_desc">
+                            <h3>{{single_sig.title}}</h3>
+                            <p>
+                                {{single_sig.info}}
+                            </p>
+                        </div>
+                    </div>
                 </div>
-                <div class="pic">
-                    <img src="res/img/{{single_sig.img}}" alt="{{single_sig.title}}">
-                </div>
-                <div class="description fadein" ng-if="single_sig.side=='left'">
-                    <div class="content_desc">
-                        <h3>{{single_sig.title}}</h3>
-                        <p>
-                            {{single_sig.info}}
-                        </p>
-                    </div> 
-                </div>
-            </div>
-        </a>
+            </a>
+        </div>
     </div>
 </div>
