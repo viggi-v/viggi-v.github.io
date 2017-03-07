@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>demo:posts</title>
+    <link rel="stylesheet" href="">
+    <style>
+    .card {
+        border: 1px solid green;
+        padding: 10px;
+        margin: 10px;
+    }
+    [disabled]{
+    	background-color: white;
+    	border:0px black;
+    }
+    </style>
+    <script>
+    var members = [];
+
+    function addToList() {
+        // body...
+        var name = document.getElementById("newname").value;
+        var sig = document.getElementById("newsig").value;
+        members.push({
+            "name": name,
+            "sig": sig
+        });
+        name.value="";
+        sig.value="";
+        displayList();
+    }
+
+    function edit(id) {
+        var pos = parseInt(id.substr(3));
+        var button = document.getElementById(id);
+        button.innerHTML = "SAVE";
+        button.setAttribute("onclick", "save(" + pos + ")");
+        document.getElementById("name" + pos).removeAttribute("disabled");
+        document.getElementById("sig" + pos).removeAttribute("disabled");
+    }
+
+    function save(pos) {
+        members[pos].name = document.getElementById("name" + pos).value;
+        members[pos].sig = document.getElementById("sig" + pos).value;
+        displayList();
+    }
+
+    function displayList() {
+        var output = document.getElementById("output");
+        //Clear the op
+        output.innerHTML = '';
+
+        for (var i = 0; i < members.length; i++) {
+            var card = document.createElement("div");
+            card.setAttribute("class", "card");
+            var input1 = document.createElement("input");
+            input1.value = members[i].name;
+            input1.setAttribute("disabled", "disabled");
+            input1.setAttribute("id", "name" + i);
+
+            var input2 = document.createElement("input");
+            input2.value = members[i].sig;
+            input2.setAttribute("disabled", "disabled");
+            input2.setAttribute("id", "sig" + i);
+            var btn = document.createElement("button");
+            var textNode = document.createTextNode("EDIT");
+            btn.appendChild(textNode);
+            btn.setAttribute("id", "btn" + i);
+            btn.setAttribute("onclick", "edit(this.id)");
+            card.appendChild(input1);
+            card.appendChild(input2);
+            card.appendChild(btn);
+            output.appendChild(card);
+        }
+    }
+
+    function download() {
+        var text = JSON.stringify(members);
+        filename = "members.json";
+        var element = document.createElement('a');
+        element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+        element.setAttribute('download', filename);
+
+        element.style.display = 'none';
+        document.body.appendChild(element);
+
+        element.click();
+
+        document.body.removeChild(element);
+    }
+    function sendData(){
+    	alert("This does nothing as of now, so refer the notes.");
+    }
+    </script>
+</head>
+
+<body>
+    <div class="note">
+        Note
+        <br> You don't really need a form to submit data. In fact, I don't really love forms that much except when I am using angular.
+        <br>
+        For sending in AJAX, refer 
+        <a target="blank" href="http://stackoverflow.com/questions/34468677/ajax-and-javascript-how-to-post-array-without-using-jquery" title="AJAX"> this</a>
+        <button onclick="download()">Generate JSON</button>
+        <button onclick="sendData()">Send the entire data</button>
+    </div>
+    <div id="output">
+    </div>
+    <div class="card">
+        Enter name:
+        <input id="newname" type="text"></input>
+        <br> Enter SIG:
+        <input id="newsig" type="text"></input>
+        <br>
+        <button onclick="addToList()">Add</button>
+    </div>
+</body>
+
+</html>
