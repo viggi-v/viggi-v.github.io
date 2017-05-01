@@ -1,0 +1,27 @@
+{
+  "event1": {
+    "title": "Ignite '16",
+    "sig": "ALL Sigs",
+    "date": "sampledate"
+  },
+  "event2": {
+    "title": "HacktoberFest",
+    "sig": "CompSoc",
+    "date": "sampledate"
+  },
+  "event3": {
+    "title": "Inspire",
+    "sig": "All sigs",
+    "date": "sampledate"
+  },
+  "event4": {
+    "title": "Workshop Series",
+    "sig": "All Sigs",
+    "date": "sampledate"
+  },
+  "event5": {
+    "title": "Project Expo",
+    "sig": "All Sigs",
+    "date": "sampledate"
+  } 
+}

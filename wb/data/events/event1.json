@@ -1,0 +1,16 @@
+{
+  "title": "IEEE Ignite",
+  "date": "September 2017",
+  "sig": "All SIGs",
+  "description": "This was the first event held during the year, organized by the second years for the freshmen of the campus. This included various events including an online hackerrank competition, quizzes, training sessions and talks.",
+  "links": [
+    {
+      "title": "GitHub repository for the project code",
+      "url": "https://www.example.com"
+    },
+    {
+      "title": "Facebook post",
+      "url": "https://www.anotherfb.com"
+    }
+  ]
+}
