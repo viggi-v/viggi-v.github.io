@@ -28,6 +28,7 @@
     box-sizing: border-box;
     padding: 0px;
     margin: 0px;
+    line-height: 1.6;
 }
 /* Nav */
 
@@ -103,7 +104,7 @@ h3{
 }
 h4 {
     font-size: 1.2em;
-    padding: 
+    padding:10px 0px; 
 }
 .project{
     text-align: justify;
@@ -111,17 +112,7 @@ h4 {
     padding-bottom: 1%;
     border-bottom: 1px dashed #CDCDCD;
 }
-/*
-.members .col_left{
-    background-color: red;
-}
-.members .col_middle{
-    background-color: blue;
-}
-.members .col_right{
-    background-color: green;
-}
-*/
+
 @media only screen and (max-width: 768px) {
     .data_holder {
         width: 100%!important;
