@@ -1,0 +1,179 @@
+.satisfy{
+	font-family: 'Satisfy', cursive;
+}
+.jah{
+	font-family: 'Just Another Hand', cursive;
+}
+*{
+	padding:0px;
+	margin: 0px;
+	box-sizing: border-box;
+}
+
+body{
+	height: 100vh;
+	width: 100%;
+	background-image :  url(main.jpg);
+	background-size: cover;
+	background-attachment: fixed;
+	overflow: hidden;
+}
+.wrapper{
+	height: 100vh;
+	width: 100%;
+	background: #ff7e5f; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #ff7e5f, #feb47b); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ff7e5f, #feb47b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	opacity: 0.5;	
+	position: fixed;
+	top:0px;
+}
+header{
+	top:50%;
+	transform: translateY(-50%);
+	position: fixed;
+	width: 50%;
+	text-align: center;
+	color: white;
+	font-size: 48px;
+}
+.sliderParent {
+    margin: 0px auto;
+    margin-top: 15px;
+    position: relative;
+    padding: 2px;
+    width: 300px;
+    height: 10px;
+    border-radius: 50px;
+    background-color: rgba(255, 255, 255, 0.25);
+}
+.sliderChild{
+	height: 100%;
+	background-color: red;
+	border-radius: 50px;
+	width: 150px;
+	transition:0.5s all;
+}
+section{
+	height: 100vh;
+	position: fixed;
+	right: 0px;
+	top:0px;
+	color:white;
+	width: 50%;
+}
+.input_wrapper{
+	position: relative;
+	top:50%;
+	transform:translateY(-50%);
+}
+.controls{
+	position: fixed;
+	bottom:10px;
+}
+button {
+    background: transparent;
+    border: 0px;
+    color: red;
+    font-family: 'Just Another Hand';
+    font-size: 60px;
+    outline: none;
+    margin:40px;
+}
+.input_section{
+	position: relative;
+}
+.input_section input {
+    outline: none;
+    border: 0px;
+    background-color: transparent;
+    padding: 20px;
+    font-size: 60px;
+    font-family: 'Just Another Hand';
+}
+.input_section textarea{
+    background-color: transparent;
+    outline: none;
+    resize: none;
+    border: transparent;
+    font-size: 60px;
+    padding: 20px;
+    font-family: 'Just Another Hand';
+}
+.form-label {
+    position: absolute;
+    top: 0px;
+ 	left: 0px;
+    z-index: 9;
+    padding: 20px;
+    color: red;
+    font-size: 60px;
+	transition:0.5s;
+
+}
+.minified{
+    top: 0px;
+    padding: 0px;
+	font-size: 24px;
+	transition:0.5s;
+}
+@media only screen and (max-width: 768px) {
+	
+	header,section{
+		width: 100%;
+	}
+	header{
+		position: static;
+		transform: translate(0,0);
+	}
+	section{
+		height: auto;
+		position: static;
+	}
+	.wrapper{
+		position: fixed;
+	}
+	.input_wrapper {
+    	position: static!important; 
+    	transform: translate(0,0);
+	}
+
+}
+/* The radio button */
+
+input[type="radio"] {
+  display: none;
+}
+
+input[type="radio"] + label {
+  color: #292321;
+  font-family: 'Just Another Hand';
+  font-size: 60px;
+}
+
+input[type="radio"] + label span {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  margin: -1px 4px 0 0;
+  vertical-align: middle;
+  cursor: pointer;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+
+input[type="radio"] + label span {
+  background-color: #292321;
+}
+
+input[type="radio"]:checked + label span {
+  background-color: #CC3300;
+}
+
+input[type="radio"] + label span,
+input[type="radio"]:checked + label span {
+  -webkit-transition: background-color 0.4s linear;
+  -o-transition: background-color 0.4s linear;
+  -moz-transition: background-color 0.4s linear;
+  transition: background-color 0.4s linear;
+}
