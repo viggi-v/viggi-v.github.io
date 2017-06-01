@@ -1,0 +1,20 @@
+<div class="page-header">
+    <h1>Welcome, User!</h1>
+</div>
+<p class="lead">
+    Feel free to browse through the rooms, view the list or <a href="" title="" ui-sref="rooms.add">add</a> new rooms!</p>
+<div class="row">
+    <div ui-view class="col-md-4 add-window">
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4" ng-repeat="room in rooms">
+        <div class="panel panel-default">
+            <div class="panel-heading">{{room.roomName}}</div>
+            <div class="panel-body">
+                <img src="room.jpg" class="img-thumbnail img-responsive" alt="Cinque Terre">
+                <a ui-sref="room({id:'{{room.roomId}}'})" title="" class="btn btn-primary btn-block">View</a>
+            </div>
+        </div>
+    </div>
+</div>

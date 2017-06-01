@@ -1,0 +1,27 @@
+<form name="roomForm">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-star-empty"></i></span>
+        <input id="roomName" type="text" class="form-control" ng-model="roomName" name="roomName" placeholder="Room Name" required>
+        
+    </div>
+    <div class="alert alert-danger" ng-show="roomForm.roomName.$touched && roomForm.roomName.$invalid">
+            <strong>Error:</strong> Room Name cannot be empty!
+        </div>
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+        <input id="ownedBy" type="text" class="form-control" name="ownedBy" ng-model="ownedBy" placeholder="Owned by" required>
+        
+    </div>
+    <div class="alert alert-danger" ng-show="roomForm.ownedBy.$touched && roomForm.ownedBy.$invalid">
+            <strong>Error:</strong> Owner Name cannot be empty!
+    </div>
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-info-sign"></i></span>
+        <input id="note" type="text" class="form-control" ng-model="note" placeholder="Additional Info">
+    </div>
+    <div class="button-row">
+        
+    <button type="button" class="btn btn-primary" ng-click="save()" ng-disabled="roomForm.$invalid"><span class="glyphicon glyphicon-ok"></span>Save</button>
+    <button type="button" class="btn btn-danger" ng-Click="close()"><span class="glyphicon glyphicon-remove"></span>Close</button>
+    </div>
+</form>

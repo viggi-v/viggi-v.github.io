@@ -1,0 +1,84 @@
+<form name="roomForm">
+    <div class="page-header">
+        <div class="row">
+            
+            <div class="col-xs-8">
+                <h1 ng-show="!roomEditing">{{room.roomName}}</h1>
+                <input type="text" ng-show="roomEditing" class="form-control" id="roomName" ng-model="room.roomName" name="roomName" placeholder="Room Name" required>
+            </div>
+            <div>
+                <button type="button" ng-show="roomEditing" class="btn btn-success col-xs-2" ng-click="saveRoom()">
+                <span class="glyphicon glyphicon-floppy-disk"></span>
+                Save
+                </button>
+                <button type="button" ng-show="!roomEditing" class="btn btn-warning col-xs-2" ng-click="editRoom()">
+                <span class="glyphicon glyphicon-edit"></span>Edit
+                </button>
+                <button type="button" class="btn btn-danger col-xs-2" ng-click="deleteRoom()">
+                <span class="glyphicon glyphicon-trash"></span> Delete
+                </button>
+            </div>
+        </div>
+    </div>
+    <h2>About this room</h2>
+    <p>Owned by
+        <span ng-show="!roomEditing">
+            {{room.ownedBy}}
+        </span>
+        <input type="text" ng-show="roomEditing" name="ownedBy" placeholder="Owned by" ng-model="room.ownedBy" required>
+    </p>
+    <hr>
+    <p class="lead" ng-show="!roomEditing">{{room.note}}</p>
+    <input type="text" ng-show="roomEditing" name="note" placeholder="Additional Info" ng-model="room.note">
+</form>
+<div class="row" ng-controller="todoController">
+    <div class="alert alert-warning" ng-if="empty">
+        <strong>Note:</strong> We don't have any todo's for this room!
+    </div>
+    <div class="todoList" ng-if="!empty">
+        <h2>ToDo in this room:</h2>
+        <div class="row" ng-repeat="todo in todos track by $index" ng-if="!todo.done">
+            <div class="checkbox checkbox-primary col-xs-8">
+                <input type="checkbox" value="" id="{{todo.id}}" ng-model="todo.checked" ng-checked="todo.checked" ng-change="checked(todo.id,todo.checked)">
+                <label for="{{todo.id}}">
+                    <span ng-show="!todo.edit">
+                        {{todo.title}}
+                    </span>
+                    <input type="text" ng-show="todo.edit" class="form-control" id="newTodo" ng-model="todo.title" name="todo.id" placeholder="Add new Todo" required ng-blur="update(todo.id,todo.title)">
+                    <div class="alert alert-danger" ng-show="todo.id.$touched && todo.id.$invalid">
+                        <strong>Error:</strong> Content Cannot be empty!
+                    </div>
+                </label>
+            </div>
+            <span class="glyphicon glyphicon-edit col-xs-2 align-middle" ng-click="todo.edit = true;"></span>
+            <span class="glyphicon glyphicon-trash col-xs-2 align-middle" ng-click="removeTodo(todo.id)"></span>
+        </div>
+    </div>
+    <div class="new-todo">
+        <form name="newTodoData">
+            <div class="form-group">
+                <div class="col-xs-10">
+                    <input type="text" class="form-control" id="newTodo" ng-model="newTodo" name="newTodo" placeholder="Add new Todo" required>
+                    
+                </div>
+                <button type="button" class="btn btn-info col-xs-2" ng-disabled="newTodoData.$invalid" ng-click="addTodo()">Add</button>
+            </div>
+        </form>
+    </div>
+    <div class="doneList" ng-if="!empty">
+        <h2>Already done items:</h2>
+        <div class="row" ng-repeat="todo in todos track by $index" ng-if="todo.done">
+            <div class="checkbox checkbox-success col-xs-8">
+                <input type="checkbox" value="" id="{{todo.id}}" ng-model="todo.checked" ng-checked="todo.checked" ng-change="checked(todo.id,todo.checked)">
+                <label for="{{todo.id}}">
+                    <span ng-show="!todo.edit">
+                        {{todo.title}}
+                    </span>
+                    <input type="text" ng-show="todo.edit" class="form-control" id="newTodo" ng-model="todo.title" name="todo.id" placeholder="Add new Todo" required ng-blur="update(todo.id,todo.title)">
+                </label>
+            </div>
+            <span class="glyphicon glyphicon-edit col-xs-2" ng-click="todo.edit = true;"></span>
+            <span class="glyphicon glyphicon-trash col-xs-2" ng-click="removeTodo(todo.id)"></span>
+        </div>
+    </div>
+</div>
