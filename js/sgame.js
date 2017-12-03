@@ -1,13 +1,15 @@
-var dir = '',prevdir = '';
-var prevx,prevy;
-var tx=0, ty=0;
-var btx,bty;
+var dir = '',
+    prevdir = '';
+var prevx, prevy;
+var tx = 0,
+    ty = 0;
+var btx, bty;
 var canvas, ctx;
 var score = 0;
 var myTimer;
 var canvasHeight;
 var canvasWidth;
-var foodCount=0;
+var foodCount = 0;
 var bigFoodScore = 50;
 var bigFoodEnabled = 0;
 var stripSize;
@@ -23,7 +25,7 @@ var cycle_flag = 0;
  */
 var pixelSize = 14;
 
-var snake = { head: { x: pixelSize/2, y: pixelSize/2 }, keyPoints: [], sLength: 3 };
+var snake = { head: { x: pixelSize / 2, y: pixelSize / 2 }, keyPoints: [], sLength: 3 };
 
 /*    
     function fetch() {
@@ -47,22 +49,24 @@ var snake = { head: { x: pixelSize/2, y: pixelSize/2 }, keyPoints: [], sLength: 
 */
 function initialize() {
     canvas = document.getElementById("myCanvas");
-    canvas.width = $("#home").innerWidth() - $("#home").innerWidth()%pixelSize;
-    canvas.height = 0.85*$("#home").innerHeight();
-    canvas.height -= canvas.height%pixelSize;
+    canvas.width = $("#home").innerWidth() - $("#home").innerWidth() % pixelSize;
+    canvas.height = 0.85 * $("#home").innerHeight();
+    canvas.height -= canvas.height % pixelSize;
     canvasWidth = canvas.width;
     canvasHeight = canvas.height;
     ctx = canvas.getContext("2d");
     stripSize = $("#timeStrip").innerWidth();
 }
-function updateScore(){
+
+function updateScore() {
     var scoreStr = '';
-    while(scoreStr.length < 5-score.toString().length)
-        scoreStr+='0';
-    scoreStr+=score.toString();
+    while (scoreStr.length < 5 - score.toString().length)
+        scoreStr += '0';
+    scoreStr += score.toString();
     document.getElementById("scoreBoard").innerHTML = scoreStr;
 
 }
+
 function drawFood(x, y, col, size) {
     if (size) {
         ctx.beginPath();
@@ -70,35 +74,34 @@ function drawFood(x, y, col, size) {
         ctx.fillStyle = col;
         ctx.fill();
         ctx.closePath();
-    } 
+    }
 }
 
 function drawPresentFood() {
     drawFood(tx, ty, 'red', foodSize);
-    if(foodCount==5 || bigFoodEnabled){
+    if (foodCount == 5 || bigFoodEnabled) {
         // The big food 
-        if(foodCount==5){
-            var newTimer = setInterval(decreaseScore,100);
+        if (foodCount == 5) {
+            var newTimer = setInterval(decreaseScore, 100);
             foodCount = 0;
             bigFoodEnabled = 1;
-            do{
-                btx = Math.floor(Math.random() * (canvasWidth-42));
-                bty = Math.floor(Math.random() * (canvasHeight-42));
-                btx -= btx%pixelSize;
-                bty -= bty%pixelSize;
-                var p = ctx.getImageData(btx,bty,1,1);
-            }while(p[0]===0 && p[1]!==128 && p[2]===0);
+            do {
+                btx = Math.floor(Math.random() * (canvasWidth - 42));
+                bty = Math.floor(Math.random() * (canvasHeight - 42));
+                btx -= btx % pixelSize;
+                bty -= bty % pixelSize;
+                var p = ctx.getImageData(btx, bty, 1, 1);
+            } while (p[0] === 0 && p[1] !== 128 && p[2] === 0);
             bigFoodScore = 50;
         }
 
-        drawFood(btx,bty,'red',bigFoodSize);
-       
-        function decreaseScore(){
-            if(bigFoodScore>0){
-                bigFoodScore-=1;
+        drawFood(btx, bty, 'red', bigFoodSize);
+
+        function decreaseScore() {
+            if (bigFoodScore > 0) {
+                bigFoodScore -= 1;
                 renderTimeLeft();
-            }
-            else{
+            } else {
                 bigFoodEnabled = 0;
                 clearInterval(newTimer);
                 clearTimeLeft();
@@ -107,26 +110,29 @@ function drawPresentFood() {
         }
     }
 }
-function renderTimeLeft(){
-    var val = stripSize*(bigFoodScore/50);
-    if($(".banner").css("visibility")!="visible")
-        $(".banner").css("visibility","visible");
-    $("#timeLeft").css("width",val+"px");
+
+function renderTimeLeft() {
+    var val = stripSize * (bigFoodScore / 50);
+    if ($(".banner").css("visibility") != "visible")
+        $(".banner").css("visibility", "visible");
+    $("#timeLeft").css("width", val + "px");
 }
-function clearTimeLeft(){
-    $(".banner").css("visibility","hidden");
+
+function clearTimeLeft() {
+    $(".banner").css("visibility", "hidden");
 }
+
 function resetTargets() {
-    tx = Math.floor(Math.random() * (canvasWidth-pixelSize));
-    ty = Math.floor(Math.random() * (canvasHeight-pixelSize));
-    var p = ctx.getImageData(tx,ty,1,1);
-    
+    tx = Math.floor(Math.random() * (canvasWidth - pixelSize));
+    ty = Math.floor(Math.random() * (canvasHeight - pixelSize));
+    var p = ctx.getImageData(tx, ty, 1, 1);
+
     //This was coz sometimes we get food on top of a snake 
-    if(p[0]==0 && p[1]==128 && p[2]==0)
+    if (p[0] == 0 && p[1] == 128 && p[2] == 0)
         resetTargets();
-    
-    tx -= tx%pixelSize - pixelSize/2;
-    ty -= ty%pixelSize - pixelSize/2;
+
+    tx -= tx % pixelSize - pixelSize / 2;
+    ty -= ty % pixelSize - pixelSize / 2;
     //tx+=14;
     //ty+=14; 
 }
@@ -149,28 +155,26 @@ function updatePos() {
             break;
     }
     //In case it cuts the boundary
-    if(snake.head.x > canvasWidth){
+    if (snake.head.x > canvasWidth) {
         addKeyPoint();
-        snake.head.x -= canvasWidth+pixelSize;
+        snake.head.x -= canvasWidth + pixelSize;
         addKeyPoint();
-    }
-    else if(snake.head.x < 0){
+    } else if (snake.head.x < 0) {
         addKeyPoint();
-        snake.head.x += canvasWidth+pixelSize;
-        addKeyPoint();
-    }
-    if(snake.head.y > canvasHeight){
-        addKeyPoint();
-        snake.head.y -= canvasHeight+pixelSize;
+        snake.head.x += canvasWidth + pixelSize;
         addKeyPoint();
     }
-    else if(snake.head.y < 0){
+    if (snake.head.y > canvasHeight) {
         addKeyPoint();
-        snake.head.y += canvasHeight+pixelSize;
+        snake.head.y -= canvasHeight + pixelSize;
+        addKeyPoint();
+    } else if (snake.head.y < 0) {
+        addKeyPoint();
+        snake.head.y += canvasHeight + pixelSize;
         addKeyPoint();
     }
-    
-    
+
+
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     drawBody();
     drawPresentFood();
@@ -187,15 +191,15 @@ function updatePos() {
         drawBody();
         drawPresentFood();
     }
-    if(Math.abs(snake.head.x - btx) < 15 && Math.abs(snake.head.y - bty) < 15){
-        score+=bigFoodScore;
-        bigFoodScore=0;
-        bigFoodEnabled=0;
+    if (Math.abs(snake.head.x - btx) < 15 && Math.abs(snake.head.y - bty) < 15) {
+        score += bigFoodScore;
+        bigFoodScore = 0;
+        bigFoodEnabled = 0;
         snake.sLength++;
         updateScore();
     }
 
-    cycle_flag = 0;//reset cycle >.<
+    cycle_flag = 0; //reset cycle >.<
 }
 
 
@@ -212,29 +216,29 @@ function drawBody() {
              * py==ky and px > kx
              */
             if (presentPoint.x > snake.keyPoints[i].x && presentPoint.y == snake.keyPoints[i].y) {
-                delta = presentPoint.x - snake.keyPoints[i].x ;
-                for (var j = 0; j < delta && delta < canvasWidth-1 && drawnLength <= snake.sLength; j += 7) {
+                delta = presentPoint.x - snake.keyPoints[i].x;
+                for (var j = 0; j < delta && delta < canvasWidth - 1 && drawnLength <= snake.sLength; j += 7) {
                     drawFood(presentPoint.x - j, presentPoint.y, 'green', body_size);
                     drawnLength++;
                 }
             }
             if (presentPoint.x < snake.keyPoints[i].x && presentPoint.y == snake.keyPoints[i].y) {
-                delta = snake.keyPoints[i].x - presentPoint.x ;
-                for (var j = 0; j < delta && delta < canvasWidth-1 && drawnLength <= snake.sLength; j += 7) {
+                delta = snake.keyPoints[i].x - presentPoint.x;
+                for (var j = 0; j < delta && delta < canvasWidth - 1 && drawnLength <= snake.sLength; j += 7) {
                     drawFood(presentPoint.x + j, presentPoint.y, 'green', body_size);
                     drawnLength++;
                 }
             }
             if (presentPoint.y > snake.keyPoints[i].y && presentPoint.x == snake.keyPoints[i].x) {
-                delta = presentPoint.y - snake.keyPoints[i].y ;
-                for (var j = 0; j < delta && delta < canvasHeight-1 && drawnLength <= snake.sLength; j += 7) {
+                delta = presentPoint.y - snake.keyPoints[i].y;
+                for (var j = 0; j < delta && delta < canvasHeight - 1 && drawnLength <= snake.sLength; j += 7) {
                     drawFood(presentPoint.x, presentPoint.y - j, 'green', body_size);
                     drawnLength++;
                 }
             }
             if (presentPoint.y < snake.keyPoints[i].y && presentPoint.x == snake.keyPoints[i].x) {
-                delta = snake.keyPoints[i].y - presentPoint.y ;
-                for (var j = 0; j < delta && delta < canvasHeight-1 && drawnLength <= snake.sLength; j += 7) {
+                delta = snake.keyPoints[i].y - presentPoint.y;
+                for (var j = 0; j < delta && delta < canvasHeight - 1 && drawnLength <= snake.sLength; j += 7) {
                     drawFood(presentPoint.x, presentPoint.y + j, 'green', body_size);
                     drawnLength++;
                 }
@@ -244,13 +248,13 @@ function drawBody() {
             presentPoint.y = snake.keyPoints[i].y;
         }
         //Lets clear the remaining keyPoints :)
-        snake.keyPoints.splice(i,snake.keyPoints.length);
+        snake.keyPoints.splice(i, snake.keyPoints.length);
     }
-    
+
 }
 /*
  * The keyPoints keep track of the bendings of the body
- */ 
+ */
 function addKeyPoint() {
     var newKeyPoint = { x: snake.head.x, y: snake.head.y };
     snake.keyPoints.unshift(newKeyPoint);
@@ -266,45 +270,46 @@ function addKeyPoint() {
  * I Hope tin-tin will save me :*
  */
 function isHeadHit() {
-    var target={x:0,y:0};
-    switch(dir){
+    var target = { x: 0, y: 0 };
+    switch (dir) {
         case 'right':
-            target.x = (snake.head.x+pixelSize)%canvasWidth;
-            
+            target.x = (snake.head.x + pixelSize) % canvasWidth;
+
             //target.x = snake.head.x+pixelSize;
             target.y = snake.head.y;
             break;
         case 'left':
-            target.x = snake.head.x-pixelSize;
+            target.x = snake.head.x - pixelSize;
             target.y = snake.head.y;
-            if(snake.head.x == 0){
-                target.x = canvasWidth-pixelSize;
+            if (snake.head.x == 0) {
+                target.x = canvasWidth - pixelSize;
             }
             break;
         case 'up':
             target.x = snake.head.x;
-            target.y = snake.head.y-pixelSize;
-            if(snake.head.y == 0)
-                target.y = canvasHeight-pixelSize;
+            target.y = snake.head.y - pixelSize;
+            if (snake.head.y == 0)
+                target.y = canvasHeight - pixelSize;
             break;
         case 'down':
             target.x = snake.head.x;
-            target.y = (snake.head.y+pixelSize)%canvasHeight;
+            target.y = (snake.head.y + pixelSize) % canvasHeight;
             break;
     }
-    var p = ctx.getImageData(target.x,target.y,1,1).data;
-    if(p[0]==0 && p[1]==128 && p[2]==0)
+    var p = ctx.getImageData(target.x, target.y, 1, 1).data;
+    if (p[0] == 0 && p[1] == 128 && p[2] == 0)
         gameOver();
 
 }
 
 function gameOver() {
     clearInterval(myTimer);
-    setInterval(blink,1000);
+    setInterval(blink, 1000);
 }
-function blink(){
-    ctx.clearRect(0,0,canvasWidth,canvasHeight);
-    setTimeout(drawBody,500);
+
+function blink() {
+    ctx.clearRect(0, 0, canvasWidth, canvasHeight);
+    setTimeout(drawBody, 500);
 }
 
 
