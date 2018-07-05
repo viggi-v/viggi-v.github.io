@@ -1,13 +1,12 @@
 # Site settings
 title:          Enthusiast
 description:    "Just another undergrad trying to be a Geek"
-baseurl:        "/blog"
+baseurl:        "/"
 url:            "https://viggi-v.github.io"
 
 # Author
 author:
   name:         Vighnesh Velayudhan
-  url:          https://chester.how
   email:        vighneshvelayudhan@gmail.com
 
 # Build settings
