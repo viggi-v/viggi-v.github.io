@@ -2,8 +2,8 @@
 title:          Enthusiast
 description:    "Just another undergrad trying to be a Geek"
 baseurl:        "/"
-url:            "https://viggi-v.github.io"
-
+url:            "localhost:4000"
+future: true
 # Author
 author:
   name:         Vighnesh Velayudhan
