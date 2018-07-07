@@ -3,3 +3,4 @@
 source "https://rubygems.org"
 gemspec
 gem 'jekyll-seo-tag'
+gem "jekyll-feed", "~> 0.10.0"

@@ -15,7 +15,7 @@ social:
     -https://www.facebook.com/v.vighnesh
     -http://github.com/viggi-v/
     -https://www.instagram.com/_viggi_v_/
-    
+
 
 # Build settings
 markdown:       kramdown
@@ -29,6 +29,7 @@ sass:
 plugins:
   - jekyll-paginate
   - jekyll-seo-tag
+  - jekyll-feed
   # - jemoji #Uncomment this to allow emoji in your post
 
 # Permalinks
