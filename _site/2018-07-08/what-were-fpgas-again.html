@@ -54,7 +54,7 @@
 
   <p>It did take me quite some time(3 minutes) and some effort(reading a <a href="https://en.wikipedia.org/wiki/VHDL">wikipedia article</a>) to convince myself that VHDL was not originally written to “code” FPGAs.</p>
 
-<p>We all would have probably seen a bread board before; it is a simple prototyping tool with horizontal or vertical connections and we can plug in components and make any circuit we want, with it, constrained to the availability of slots. FPGAs are just the same, when we talk about what it offers. They originally have a set of Look Up Tables(LUTs) and DSP blocks. We can set the logic output for any input combinations in an LUT, not necessarily explinable by a simple function like <code class="highlighter-rouge">d = a xor b xor c</code>. DSP blocks are tiny processing element with multipliers and adders inside, which are fixed-length, and could be used for faster computation. And when we are “coding” an FPGA, what we are essentially doing is, describing a hardware, using any Hardware Description Language like VHDL or Verilog, and then using a synthesiser to generate an appropriate circuit made up of these LUTs and DSP Blocks which would best describe the hardware we wrote using out HDL. It makes FPGAs and the way we configure it using VHDL, vastly different from other embedded systems for two reasons,</p>
+<p>We all would have probably seen a bread board before; it is a simple prototyping tool with horizontal or vertical connections and we can plug in components and make any circuit we want, with it, constrained to the availability of slots. FPGAs are just the same, when we talk about what it offers. They originally have a set of Look Up Tables(LUTs) and DSP blocks. We can set the logic output for any input combinations in an LUT, not necessarily explainable by a simple function like <code class="highlighter-rouge">d = a xor b xor c</code>. DSP blocks are tiny processing element with multipliers and adders inside, which are of fixed-length, and could be used for faster computation. And when we are “coding” an FPGA, what we are essentially doing is, describing a hardware, using any Hardware Description Language like VHDL or Verilog, and then using a synthesiser to generate an appropriate circuit made up of these LUTs and DSP Blocks which would best describe the hardware we wrote using out HDL. It makes FPGAs and the way we configure it using VHDL, entirely different from other embedded systems for two reasons,</p>
 <ol>
   <li>We are not “programming” per se, we are designing a hardware.</li>
   <li>VHDL is not a sequentially executable language, and the code isn’t “running” in my hardware, it is getting implemented on it.</li>
@@ -154,7 +154,7 @@
 
     <footer>
       <span>
-        &copy; <time datetime="2018-07-07 02:44:15 +0200">2018</time> Vighnesh Velayudhan. Made with Jekyll using the <a href="https://github.com/chesterhow/tale/">Tale</a> theme.
+        &copy; <time datetime="2018-07-07 09:13:50 +0200">2018</time> Vighnesh Velayudhan. Made with Jekyll using the <a href="https://github.com/chesterhow/tale/">Tale</a> theme.
       </span>
     </footer>
   </body>
