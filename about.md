@@ -12,3 +12,6 @@ I am just another undergrad, who wishes to be an engineer, without losing the me
 
 Introduced pretty late into lot of cool things including Ubuntu and Football, I am trying to catch up.
 
+Email me on <a href="mailto:vighneshvelayudhan@gmail.com">vighneshvelayudhan@gmail.com</a>.
+
+You can find me on <a href="https://www.linkedin.com/in/vighnesh-velayudhan/">LinkedIn</a>, <a href="https://www.facebook.com/v.vighnesh">Facebook</a>, <a href="https://www.instagram.com/_viggi_v_/">Instagram</a> and <a href="https://github.com/viggi-v/">GitHub</a>.
