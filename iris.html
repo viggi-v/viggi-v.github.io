@@ -1,0 +1,995 @@
+<html class="gr__iris_nitk_ac_in"><head>
+  <title>Vighnesh V | IRIS</title>
+
+    <meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="gIV73HrNEMvvRbfI4/Wr17HOWJ/saGe8pMSWcAVmJ6QHlMOPaVfYT1r5+dVtWasveug/C1NZex42ZF3NC2hWDg==">
+  <link rel="shortcut icon" type="image/png" href="https://cdn.iris.nitk.ac.in/iris logo2.png" id="favicon" data-original-href="https://cdn.iris.nitk.ac.in/iris logo2.png">
+  <meta name="author" content="Akshay Revankar (14EC206) - NITK Surathkal">
+    <meta name="description" content="IRIS :: The online Student and Management Information System of NITK Surathkal. Admission Portal, Student and Faculty Portal, Online Course Learning Management and much more...">
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <!-- Meta, title, CSS, favicons, etc. -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="image_src" href="https://cdn.iris.nitk.ac.in/iris logo2.png">
+  <!-- Bootstrap -->
+  <link href="https://cdn.iris.nitk.ac.in/new_layout/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="https://cdn.iris.nitk.ac.in/new_layout/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <!-- Custom Theme Style -->
+  <link href="https://cdn.iris.nitk.ac.in/new_layout/css/custom.css?030717" rel="stylesheet">
+
+  <link href="https://cdn.iris.nitk.ac.in/new_layout/vendors/jquery-ui/jquery-ui.min.css" rel="stylesheet">
+
+  <link href="https://cdn.iris.nitk.ac.in/new_layout/css/datatables.min.css" rel="stylesheet">
+  <link href="https://cdn.iris.nitk.ac.in/new_layout/css/combine.min.css" rel="stylesheet">
+
+  
+  <script async="" src="//www.google-analytics.com/analytics.js"></script><script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-70760261-1', 'auto');
+</script>
+
+  <script src="https://cdn.iris.nitk.ac.in/javascripts/cable.js"></script>
+</head>
+
+<body class="nav-md" data-gr-c-s-loaded="true">
+<div class="printme">
+  <h2>Vighnesh V | IRIS</h2>
+</div>
+<!-- jQuery -->
+<script src="https://cdn.iris.nitk.ac.in/new_layout/vendors/jquery/dist/jquery.min.js"></script>
+
+<script src="https://cdn.iris.nitk.ac.in/new_layout/vendors/jquery-ui/jquery-ui.min.js"></script>
+<script>
+    var setContentHeight;
+</script>
+<!-- Bootstrap -->
+<script src="https://cdn.iris.nitk.ac.in/new_layout/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- FastClick -->
+<script src="https://cdn.iris.nitk.ac.in/new_layout/vendors/fastclick/lib/fastclick.js"></script>
+<script src="https://cdn.iris.nitk.ac.in/new_layout/vendors/intro.js/intro.min.js"></script>
+
+<div class="container body">
+  <div class="main_container">
+    <div class="col-md-3 left_col noprint">
+      <div class="left_col scroll-view ">
+        <div class="navbar nav_title" style="border: 0;">
+          <a href="/" class="site_title" style="text-align:center;">
+            <i class="fa" style="border: 0;"><img src="https://cdn.iris.nitk.ac.in/logoi.png" style="margin-top: 0;"></i>
+            <span>&nbsp;<img src="https://cdn.iris.nitk.ac.in/svg/irisi.svg" style="width:119px;height:35px"></span></a>
+        </div>
+        <div class="clearfix"></div>
+            <!-- menu profile quick info -->
+            <div class="profile">
+              <div class="profile_pic">
+                <img class="img-circle profile_img" src="https://iris.nitk.ac.in/hrms/students/get_profile_pic/1845?1468859783" alt="1845?1468859783">
+              </div>
+              <div class="profile_info">
+                <span>Welcome,</span>
+                <h2>Vighnesh V</h2>
+              </div>
+            </div>
+            <!-- /menu profile quick info -->
+        <br>
+
+        <div class="clearfix"></div>
+            <!-- sidebar menu -->
+            <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+  <div class="menu_section active">
+    <h3> NAVIGATION </h3>
+    <ul class="nav side-menu" style="">
+      <li>
+        <a href="/hrms">
+            <i class="fa fa-home"></i> Home
+</a>      </li>
+      <li class="active"><a><i class="fa fa-user"></i> Profile <span class="fa fa-chevron-down"></span></a>
+        <ul class="nav child_menu exp-menu-shadow" style="display: block;">
+          <li class="current-page"><a href="/hrms/students/adm_no/15EC250">View Profile</a>
+          </li>
+          <li><a href="/hrms/students/edit/15EC250">Edit Profile</a>
+          </li>
+              <li><a href="/hrms/students/1845/view_edu_account">NITK.EDU.IN Account</a>
+              </li>
+          <li><a href="/hrms/students/profile_pic/1845">Update Profile Picture</a>
+          </li>
+          <li><a href="/hrms/users/edit">Change Password</a>
+          </li>
+        </ul>
+      </li>
+      <li><a><i class="fa fa-graduation-cap"></i>Courses<span class="fa fa-chevron-down"></span></a>
+        <ul class="nav child_menu exp-menu-shadow">
+          <li> <a href="/hrms/courses">
+                <span class="fa fa-search"></span>Search current courses
+</a>          </li>
+              <li> <a href="/hrms/courses/my_courses">
+                    <span class="fa fa-search"></span>My courses
+</a>              </li>
+          <li> <a href="/hrms/feedback_courses/my_feedbacks">
+                <span class="fa fa-edit"></span>Feedbacks
+</a>          </li>
+
+
+              <li><a href="/hrms/courses/course_registration/8">
+                    <span class="fa fa-pencil-square-o"></span>Course Registration
+                </a></li>
+        </ul>
+      </li>
+
+          <li><a><i class="fa fa-inr"></i>Fees<span class="fa fa-chevron-down"></span></a>
+            <ul class="nav child_menu exp-menu-shadow">
+              <li> <a href="/hrms/finance_fee_structures">
+                    <span class="fa fa-money"></span>Your fees payment details
+</a>              </li>
+
+                  <li> <a href="/hrms/finance_fees/changepay">
+                        <span class="fa fa-money"></span>Change Pay
+</a>                  </li>
+            </ul>
+          </li>
+
+      <li><a><i class="fa fa-calendar"></i> CEMS <span class="fa fa-chevron-down"></span></a>
+  <ul class="nav child_menu">
+    <li><a href="/cems">
+        <span class="fa fa-search"></span>Calendar
+</a>    </li>
+    <li><a href="/cems/clubs/dashboard">
+        <span class="fa fa-search"></span>Club and Events
+</a>    </li>
+  </ul>
+</li>
+
+    </ul>
+  </div>
+
+  <!-- Common things for sidebar -->
+  <div class="menu_section">
+  <ul class="nav side-menu">
+    <li>
+      <a target="_blank" href="/hrms/users/moodle_login">
+          <span class="fa" style="margin-top: 0;"><img class="fa" src="https://cdn.iris.nitk.ac.in/moodle.png" style="height: 14px;width: 14px;"></span>Login to Moodle
+</a>    </li>
+
+    <li>
+      <a href="/hrms/pages/about">
+          <i class="fa fa-info-circle"></i>About Us
+</a>    </li>
+    <li>
+      <a href="/terms_of_service">
+          <i class="fa fa-legal"></i>Terms of Service
+</a>    </li>
+    <li>
+      <a href="/hrms/contact_us">
+          <i class="fa fa-envelope-o"></i>Contact Us
+</a>    </li>
+
+  </ul>
+</div>
+
+
+</div>
+
+            <!-- /sidebar menu -->
+        <!-- /menu footer buttons -->
+        <div class="sidebar-footer hidden-small theme-black  noprint" data-position="top" data-step="3" data-intro="You can access interactive tutorial like this for most of the pages by clicking on the question mark here">
+          <a data-toggle="tooltip" data-placement="top" title="" onclick="toggleFullScreen()" class="theme-black" data-original-title="FullScreen">
+            <span class="glyphicon glyphicon-fullscreen" aria-hidden="true" onclick="toggleFullScreen()"></span>
+          </a>
+          <a data-toggle="tooltip" data-placement="top" title="" class="theme-black" rel="nofollow" data-method="delete" href="/hrms/users/sign_out" data-original-title="Logout"><span class="glyphicon glyphicon-off" aria-hidden="true"></span></a>
+          <a data-toggle="tooltip" data-placement="top" title="" onclick="if($('.introjs-overlay').length==0){introJs('.right_col').start()}" class="theme-black" data-original-title="Interactive Demo">
+            <span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span>
+          </a>
+        </div>
+        <style>
+            .sidebar-footer a {
+                width: 33% !important;
+            }
+        </style>
+        <!-- /menu footer buttons -->
+      </div>
+    </div>
+
+    <!-- top navigation
+         -->
+        <!-- top navigation -->
+<div class="top_nav">
+
+  <div class="nav_menu">
+    <nav class="" role="navigation">
+      <div class="nav toggle">
+        <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="">
+          <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+            Vighnesh V
+            <span class=" fa fa-angle-down  noprint"></span>
+          </a>
+          <ul class="dropdown-menu dropdown-usermenu pull-right">
+            <li>          <a href="/hrms/students/adm_no/15EC250">Profile</a>
+            </li>
+            <li>
+              <a href="/hrms/users/edit">
+                  <span>Change Password</span>
+</a>            </li>
+            <li><a rel="nofollow" data-method="delete" href="/hrms/users/sign_out"><i class="fa fa-sign-out pull-right"></i> Log Out</a>
+            </li>
+          </ul>
+        </li>
+
+
+
+      </ul>
+    </nav>
+  </div>
+
+</div>
+<!-- /top navigation -->
+
+
+    <!-- /top navigation -->
+
+
+    <!-- page content -->
+    <div class="right_col" role="main" style="min-height: 768px;">
+      <div class="">
+        <div class="page-title">
+          <div class="col-md-8 col-sm-12 col-xs-12">
+                <ul class="breadcrumb">
+                  <li><a href="/hrms">Home</a></li><li>Student</li><li>Vighnesh  V</li>
+                </ul>
+          </div>
+          <div class="col-md-4 col-sm-12 col-xs-12 form-group pull-right top_search noprint">
+            <div class="input-group" style="width: 100%;">
+              <input type="text" class="form-control smartsearch ui-autocomplete-input" placeholder="Search for..." id="autosuggest_menu_input" data-step="1" data-intro="You can always search here for <b>quick links</b> here." autocomplete="off">
+            </div>
+          </div>
+          <script type="text/javascript">
+    function __highlight(s, t) {
+        var matcher = new RegExp("("+$.ui.autocomplete.escapeRegex(t)+")", "ig" );
+        return s.replace(matcher, "<strong>$1</strong>");
+    }
+
+    $.ui.autocomplete.prototype._renderItem = function (ul, item) {
+        //  item.label = item.label.replace(new RegExp("(?![^&;]+;)(?!<[^<>]*)(" + $.ui.autocomplete.escapeRegex(this.term) + ")(?![^<>]*>)(?![^&;]+;)", "gi"), "<strong>$1</strong>");
+        if (item.menutype == 'action')    {
+            return $("<li></li>")
+                    .data("item.autocomplete",item)
+                    .append("<a class='action'>"+ item.label +"</a>")
+                    .appendTo(ul);
+        }
+        item.label = __highlight(item.label, this.term);
+        return $("<li></li>")
+                .data("item.autocomplete", item)
+                .append("<a>" + item.label + "</a>")
+                .appendTo(ul);
+    };
+
+    gotoLink = function(event,ui){
+        window.location.href = ui.item.value;
+        return false;
+    };
+    searchoptions = function (request,response){
+        var query=request.term;
+        var available_options = [
+            {"menu_type": "link", "value": "/hrms/students/adm_no/15EC250", "label": "View your profile"},
+            {"menu_type": "link", "value": "/hrms/courses/course_registration/9", "label": "Course Registration"},
+            {"menu_type": "link", "value": "/hrms/courses/course_registration/9", "label": "Pre Registration"},
+            {"menu_type": "link", "value": "/hrms/batches", "label": "View Batches and Green Form"},
+
+            {"menu_type": "link", "value": "/bechde/products", "label": "Bechde : View Products"},
+            {"menu_type": "link", "value": "/bechde/products/new", "label": "Bechde : Add new Product"},
+        ];
+
+        var options = $.ui.autocomplete.filter(available_options,query).slice(0,9);
+        response(options)
+    };
+
+
+    $(document).ready(function() {
+        $("input#autosuggest_menu_input").autocomplete({
+            source: searchoptions,
+            select : gotoLink,
+            focus: function(event, ui) { return false; }
+        });
+    });
+</script>
+
+        </div>
+        <div class="clearfix"></div>
+
+
+
+        <div class="clearfix"></div>
+
+        
+
+
+<div class="col-md-12 col-sm-12 col-xs-12">
+  <div class="x_panel">
+    <div class="x_title">
+      <h2>User Profile</h2>
+      <div class="clearfix"></div>
+    </div>
+    <div class="x_content">
+
+      <div class="col-md-3 col-sm-3 col-xs-12 text-center">
+
+        <div class="profile_img" data-step="2" data-intro="Click on the picture to Edit your profile picture. Please upload a clear and passport photo styled photo.">
+
+          <!-- end of image cropping -->
+          <div id="crop-avatar">
+            <!-- Current avatar -->
+            <a title="Change your picture" href="/hrms/students/profile_pic/1">
+                <img class="img-responsive avatar-view" alt="Profile Picture" title="Change the profile picture" src="https://iris.nitk.ac.in/hrms/students/get_profile_pic/1845?1468859783">
+</a>          </div>
+          <!-- end of image cropping -->
+
+        </div>
+        <h3> Vighnesh  V</h3>
+
+        <ul class="list-unstyled user_data">
+          <li>
+            <i class="fa fa-graduation-cap user-profile-icon"></i> B Tech Student @ NITK, Surathkal
+          </li>
+
+          <li class="m-top-xs">
+          </li>
+        </ul>
+            <a class="btn btn-success" data-step="3" data-intro="Click here to Edit your profile. Depending on the permissions available to you, you may be able to alter only specific data." href="/hrms/students/edit/15EC250">
+                <i class="fa fa-edit m-right-xs"></i>Edit Profile
+</a>      </div>
+
+      <div class="col-md-9 col-sm-9 col-xs-12">
+
+        <div class="" role="tabpanel" data-example-id="togglable-tabs" data-step="1" data-intro="You can find your personal profile details and your academic perfomance details once updated from the academic section.">
+          <ul id="myTab" class="nav nav-tabs bar_tabs" role="tablist">
+            <li role="presentation" class="active"><a href="#tab_content1" role="tab" id="profile-tab" data-toggle="tab" aria-expanded="true">Profile</a>
+            </li>
+            <li role="presentation"><a href="#tab_content4" role="tab" id="add-tab" data-toggle="tab" aria-expanded="true">Additional Details</a>
+            </li>
+            <li role="presentation"><a href="#tab_content3" role="tab" id="bank-tab" data-toggle="tab" aria-expanded="true">Bank Details</a>
+            </li>
+            <li role="presentation"><a href="#tab_content2" role="tab" id="academic-tab" data-toggle="tab" aria-expanded="true">Academics</a>
+            </li>
+          </ul>
+          <div id="myTabContent" class="tab-content">
+            <div role="tabpanel" class="tab-pane fade active in" id="tab_content1" aria-labelledby="profile-tab">
+              <!--- LOT OF PROFILE DETAILS TO ADD IN HERE -->
+              <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="row">
+  <div class="col-md-6 col-sm-12 col-xs-12">
+    <table class="table">
+      <tbody><tr>
+          <th>Branch</th>
+
+        <td class="wd2">B Tech : Electronics and Communication Engineering&nbsp;&nbsp;
+              <span class="glyphicon glyphicon-book" aria-hidden="true"></span>
+    </td>
+<style>
+    .wd2{
+        text-align: right;
+    }
+</style>
+      </tr>
+    </tbody></table>
+
+  </div>
+  <div class="col-md-6 col-sm-12 col-xs-12">
+    <table class="table">
+      <tbody><tr>
+        <th>Father's Name</th>
+
+        <td class="wd2">P Velayudhan Namboothiri&nbsp;&nbsp;
+              <i class="fa fa-user"></i>
+    </td>
+<style>
+    .wd2{
+        text-align: right;
+    }
+</style>
+      </tr>
+    </tbody></table>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-6 col-sm-12 col-xs-12">
+    <table class="table">
+      <tbody><tr>
+        <th>Roll Number</th>
+
+        <td class="wd2">15EC250&nbsp;&nbsp;
+              <i class="fa fa-hashtag"></i>
+    </td>
+<style>
+    .wd2{
+        text-align: right;
+    }
+</style>
+      </tr>
+    </tbody></table>
+
+  </div>
+  <div class="col-md-6 col-sm-12 col-xs-12">
+    <table class="table">
+      <tbody><tr>
+        <th>Date of birth</th>
+
+        <td class="wd2">01-11-1997&nbsp;&nbsp;
+              <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
+    </td>
+<style>
+    .wd2{
+        text-align: right;
+    }
+</style>
+      </tr>
+    </tbody></table>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-6 col-sm-12 col-xs-12">
+    <table class="table">
+      <tbody><tr>
+        <th>Mess Roll Number</th>
+
+        <td class="wd2">155&nbsp;&nbsp;
+              <i class="fa fa-hashtag"></i>
+    </td>
+<style>
+    .wd2{
+        text-align: right;
+    }
+</style>
+      </tr>
+    </tbody></table>
+  </div>
+  <div class="col-md-6 col-sm-12 col-xs-12">
+    <table class="table">
+      <tbody><tr>
+        <th>Date of Admission</th>
+
+        <td class="wd2">15-07-2016&nbsp;&nbsp;
+              <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
+    </td>
+<style>
+    .wd2{
+        text-align: right;
+    }
+</style>
+      </tr>
+    </tbody></table>
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="col-md-6 col-sm-12 col-xs-12">
+    <table class="table">
+      <tbody><tr>
+        <th>Aadhaar Number</th>
+
+        <td class="wd2">9679-5706-0346&nbsp;&nbsp;
+              <i class="fa fa-hashtag"></i>
+    </td>
+<style>
+    .wd2{
+        text-align: right;
+    }
+</style>
+      </tr>
+    </tbody></table>
+  </div>
+  <div class="col-md-6 col-sm-12 col-xs-12">
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-6 col-sm-12 col-xs-12">
+    <table class="table">
+      <tbody><tr>
+        <th>Gender</th>
+
+        <td class="wd2">Male&nbsp;&nbsp;
+              <i class="fa fa-venus-mars"></i>
+    </td>
+<style>
+    .wd2{
+        text-align: right;
+    }
+</style>
+      </tr>
+    </tbody></table>
+  </div>
+  <div class="col-md-6 col-sm-12 col-xs-12">
+    <table class="table">
+      <tbody><tr>
+        <th>Blood Group</th>
+
+        <td class="wd2">A+&nbsp;&nbsp;
+              <span class="glyphicon glyphicon-tint" aria-hidden="true"></span>
+    </td>
+<style>
+    .wd2{
+        text-align: right;
+    }
+</style>
+      </tr>
+    </tbody></table>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-6 col-sm-12 col-xs-12">
+    <table class="table">
+      <tbody><tr>
+        <th>Category</th>
+
+        <td class="wd2">General&nbsp;&nbsp;
+              <i class="fa fa-tags"></i>
+    </td>
+<style>
+    .wd2{
+        text-align: right;
+    }
+</style>
+      </tr>
+    </tbody></table>
+  </div>
+  <div class="col-md-6 col-sm-12 col-xs-12">
+    <table class="table">
+      <tbody><tr>
+        <th>Nationality</th>
+
+        <td class="wd2">India&nbsp;&nbsp;
+              <span class="glyphicon glyphicon-flag" aria-hidden="true"></span>
+    </td>
+<style>
+    .wd2{
+        text-align: right;
+    }
+</style>
+      </tr>
+    </tbody></table>
+  </div>
+</div>
+
+
+
+<div class="row">
+  <div class="col-md-12">
+    <table class="table">
+      <tbody><tr>
+          <th>Permanent Address</th>
+
+        <td class="wd2">TC 25/944<br>Aristo Junction<br>Trivandrum<br>Kerala&nbsp;&nbsp;
+              <i class="fa fa-map-marker"></i>
+    </td>
+<style>
+    .wd2{
+        text-align: right;
+    }
+</style>
+    </tr></tbody></table>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-6 col-sm-12 col-xs-12">
+    <table class="table">
+      <tbody><tr>
+        <th>Pincode</th>
+
+        <td class="wd2">695014&nbsp;&nbsp;
+              <i class="fa fa-cog"></i>
+    </td>
+<style>
+    .wd2{
+        text-align: right;
+    }
+</style>
+      </tr>
+    </tbody></table>
+  </div>
+  <div class="col-md-6 col-sm-12 col-xs-12">
+    <table class="table">
+      <tbody><tr>
+        <th>Country</th>
+
+        <td class="wd2">India&nbsp;&nbsp;
+              <i class="fa fa-globe"></i>
+    </td>
+<style>
+    .wd2{
+        text-align: right;
+    }
+</style>
+      </tr>
+    </tbody></table>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-6 col-sm-12 col-xs-12">
+    <table class="table">
+      <tbody><tr>
+        <th>Phone</th>
+
+        <td class="wd2">8547628535&nbsp;&nbsp;
+              <span class="glyphicon glyphicon-phone" aria-hidden="true"></span>
+    </td>
+<style>
+    .wd2{
+        text-align: right;
+    }
+</style>
+      </tr>
+    </tbody></table>
+  </div>
+  <div class="col-md-6 col-sm-12 col-xs-12">
+    <table class="table">
+      <tbody><tr>
+        <th>Alternate Phone</th>
+
+        <td class="wd2">9495356034 &nbsp;&nbsp;
+              <span class="glyphicon glyphicon-phone" aria-hidden="true"></span>
+    </td>
+<style>
+    .wd2{
+        text-align: right;
+    }
+</style>
+
+      </tr>
+    </tbody></table>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <table class="table">
+      <tbody><tr>
+        <th>Email address</th>
+
+        <td class="wd2">vighneshvelayudhan@gmail.com&nbsp;&nbsp;
+              <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+    </td>
+<style>
+    .wd2{
+        text-align: right;
+    }
+</style>
+      </tr>
+    </tbody></table>
+  </div>
+</div>
+
+              </div>
+            </div>
+            <div role="tabpanel" class="tab-pane fade active" id="tab_content4" aria-labelledby="add-tab">
+              <!--- LOT OF PROFILE DETAILS TO ADD IN HERE -->
+              <div class="col-md-12 col-sm-12 col-xs-12">
+                <form class="edit_student_add_info" id="edit_student_add_info_850" action="/hrms/students/1845/update_additional_info" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="_method" value="patch"><input type="hidden" name="authenticity_token" value="gIV73HrNEMvvRbfI4/Wr17HOWJ/saGe8pMSWcAVmJ6QHlMOPaVfYT1r5+dVtWasveug/C1NZex42ZF3NC2hWDg==">
+    <div class="col-md-12 col-sm-12 col-xs-12">
+
+      <div class="row">
+        <div class="col-md-6 col-sm-12 col-xs-12">
+          <table class="table">
+            <tbody><tr>
+              <th>NAD ID</th>
+
+              <td class="wd2">
+                <input class="form-control" pattern="[N|C][0-9]{11}" placeholder="N############ or C###########" title="N or C followed by 11 digits,no spaces" type="text" name="student_add_info[nad_id]" id="student_add_info_nad_id">
+              </td>
+            </tr>
+          </tbody></table>
+
+        </div>
+      </div>
+      <input type="submit" name="commit" value="Submit details" class="btn btn-primary" style="margin:0 auto;display:block;" data-disable-with="Submit details">
+    </div>
+</form>
+              </div>
+            </div>
+            <div role="tabpanel" class="tab-pane fade active" id="tab_content3" aria-labelledby="bank-tab">
+              <!--- LOT OF PROFILE DETAILS TO ADD IN HERE -->
+              <div class="col-md-12 col-sm-12 col-xs-12">
+
+                <div class="row">
+                  <div class="col-md-6 col-sm-12 col-xs-12">
+                    <table class="table">
+                      <tbody><tr>
+                        <th>Bank Name</th>
+
+        <td class="wd2">State Bank of India&nbsp;&nbsp;
+              <i class="fa fa-tag"></i>
+    </td>
+<style>
+    .wd2{
+        text-align: right;
+    }
+</style>
+                      </tr>
+                    </tbody></table>
+
+                  </div>
+                  <div class="col-md-6 col-sm-12 col-xs-12">
+                    <table class="table">
+                      <tbody><tr>
+                        <th>Branch Name</th>
+
+        <td class="wd2">THAMPANOOR, THIRUVANANTHAPURAM&nbsp;&nbsp;
+              <i class="fa fa-tag"></i>
+    </td>
+<style>
+    .wd2{
+        text-align: right;
+    }
+</style>
+                      </tr>
+                    </tbody></table>
+                  </div>
+                </div>
+
+
+                <div class="row">
+                  <div class="col-md-6 col-sm-12 col-xs-12">
+                    <table class="table">
+                      <tbody><tr>
+                        <th>Account Number</th>
+
+        <td class="wd2">20171727951&nbsp;&nbsp;
+              <i class="fa fa-hashtag"></i>
+    </td>
+<style>
+    .wd2{
+        text-align: right;
+    }
+</style>
+                      </tr>
+                    </tbody></table>
+
+                  </div>
+                  <div class="col-md-6 col-sm-12 col-xs-12">
+                    <table class="table">
+                      <tbody><tr>
+                        <th>IFSC Code</th>
+
+        <td class="wd2">SBIN0008671&nbsp;&nbsp;
+              <i class="fa fa-barcode"></i>
+    </td>
+<style>
+    .wd2{
+        text-align: right;
+    }
+</style>
+                      </tr>
+                    </tbody></table>
+                  </div>
+                </div>
+
+
+              </div>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="tab_content2" aria-labelledby="academic-tab">
+              <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="x_panel notop">
+                  <div class="x_title">
+                    <h2>Performance graph</h2>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content">
+                        <div id="graph_bar" style="width:100%;height:280px;"></div>
+                        <table class="table table-striped">
+                          <thead>
+                          <tr>
+                            <th>Semester</th>
+                            <th>Credits</th>
+                          </tr>
+                          </thead>
+                          <tbody>
+                          <tr>
+                            <td>I </td>
+                            <td>21</td>
+                          </tr>
+                          <tr>
+                            <td>II </td>
+                            <td>20</td>
+                          </tr>
+                          <tr>
+                            <td>III </td>
+                            <td>28</td>
+                          </tr>
+                          <tr>
+                            <td>IV </td>
+                            <td>24</td>
+                          </tr>
+                          <tr>
+                            <td>V </td>
+                            <td>27</td>
+                          </tr>
+                          <tr>
+                            <td>VI </td>
+                            <td>23</td>
+                          </tr>
+                          <tr>
+                            <td>VII </td>
+                            <td>13</td>
+                          </tr>
+                          </tbody>
+                          <tfoot>
+                          <tr>
+                            <th>Total</th>
+                            <th>156</th>
+                          </tr>
+                          </tfoot>
+                        </table>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.iris.nitk.ac.in/new_layout/vendors/raphael/raphael.min.js"></script>
+<script src="https://cdn.iris.nitk.ac.in/new_layout/vendors/morris.js/morris.min.js"></script>
+
+    <script>
+        var cgpa_shown=false;
+        $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+            var target = $(e.target).attr("href");
+            if(target=="#tab_content2" && cgpa_shown==false){
+                Morris.Line({
+                    element: 'graph_bar',
+                    data: [{sgpa:8.55,semester:"I"},{sgpa:7.79,semester:"II"},{sgpa:7.43,semester:"III"},{sgpa:6.92,semester:"IV"},{sgpa:7.04,semester:"V"},{sgpa:6.41,semester:"VI"},{sgpa:7.45,semester:"VII"},],
+                    xkey: 'semester',
+                    ykeys: ['sgpa'],
+                    labels: ['SGPA'],
+                    parseTime:false,
+                    hideHover: 'auto',
+                    resize: true,
+                    ymax:10,
+                    ymin:5
+                });
+                cgpa_shown=true;
+            }
+        });
+    </script>
+
+      </div>
+    </div>
+    <!-- /page content -->
+
+    <!-- footer content -->
+    <footer>
+      <div class="pull-left">
+        Module designed by :
+        &nbsp;<a rel="noreferrer" href="https://www.linkedin.com/in/akshayrevankar/" target="_blank">Akshay Revankar</a>
+      </div>
+      <div class="pull-right">
+        Your IP : 10.53.123.214 | Server # N1 |  IRIS @ NITK  2019
+      </div>
+      <div class="clearfix"></div>
+    </footer>
+
+    <!-- /footer content -->
+  </div>
+</div>
+
+<!-- NProgress -->
+<script src="https://cdn.iris.nitk.ac.in/new_layout/vendors/nprogress/nprogress.js"></script>
+
+<script src="https://cdn.iris.nitk.ac.in/new_layout/vendors/select2/dist/js/select2.full.min.js"></script>
+<!-- jQuery custom content scroller
+<script src="https://cdn.iris.nitk.ac.in/new_layout/vendors/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+<!-- Custom Theme Scripts -->
+<script src="https://cdn.iris.nitk.ac.in/new_layout/js/jquery_ujs.js"></script>
+<script src="https://cdn.iris.nitk.ac.in/new_layout/js/custom.js"></script>
+<script src="https://cdn.iris.nitk.ac.in/new_layout/js/bootstrap-responsive-tabs.js"></script>
+
+
+<script>
+function toggleFullScreen() {
+  if ((document.fullScreenElement && document.fullScreenElement !== null) ||    
+   (!document.mozFullScreen && !document.webkitIsFullScreen)) {
+    if (document.documentElement.requestFullScreen) {  
+      document.documentElement.requestFullScreen();  
+    } else if (document.documentElement.mozRequestFullScreen) {  
+      document.documentElement.mozRequestFullScreen();  
+    } else if (document.documentElement.webkitRequestFullScreen) {  
+      document.documentElement.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT);  
+    }  
+  } else {  
+    if (document.cancelFullScreen) {  
+      document.cancelFullScreen();  
+    } else if (document.mozCancelFullScreen) {  
+      document.mozCancelFullScreen();  
+    } else if (document.webkitCancelFullScreen) {  
+      document.webkitCancelFullScreen();  
+    }  
+  }  
+}
+</script>
+<script>
+    var x = 1;
+    window.onresize = function () {
+        if (x == 1 && (((window.outerHeight - window.innerHeight) > 100) || ((window.outerWidth - window.innerWidth) > 100))) {
+            x = 0;
+            console.clear();
+            console.log("%cWarning message", "font: 2em sans-serif; color: yellow; background-color: red;");
+            console.log("%cYou have opened the Developer Tools.", "font: 1.5em sans-serif;");
+            console.log("\nWe are NOT responsible for any modifications you make to the DOM object.\nThis action and all further actions performed with Developer Tools opened will be logged.");
+            $.ajax({url: '/hrms/pages/log.js?control=' + 'students&act=' + 'show'});
+        }
+    };
+    $(document).ready(function () {
+	setContentHeight();
+        if (x == 1 && (((window.outerHeight - window.innerHeight) > 100) || ((window.outerWidth - window.innerWidth) > 100))) {
+            x = 0;
+            $.ajax({url: '/hrms/pages/log.js?control=' + 'students&act=' + 'show'});
+            console.log("%cWarning message", "font: 2em sans-serif; color: yellow; background-color: red;");
+            console.log("%cYou have opened the Developer Tools.", "font: 1.5em sans-serif;");
+            console.log("\nWe are NOT responsible for any modifications you make to the DOM object.\nThis action and all further actions performed with Developer Tools opened will be logged.");
+        }
+
+        /********* WIDGETS MANAGER *************/
+        if(!localStorage.getItem("user_id"))
+            localStorage.setItem("user_id",1936);
+        else if(localStorage.getItem("user_id")!=1936) {
+            localStorage.clear();
+            localStorage.setItem("user_id",1936);
+        }
+        $.each($('[id^="widget_"]'),function(i,val){
+            var widg=$(val).attr('id');
+            if(!localStorage.getItem(widg))
+                localStorage.setItem(widg,"true");
+            $('#'+widg).click(function(){
+                localStorage.setItem(widg,localStorage.getItem(widg)!="true");
+            });
+            if (localStorage.getItem(widg)=="false") {
+                $('#'+widg).trigger('click');
+                localStorage.setItem(widg,localStorage.getItem(widg)!="true");
+            }
+
+        });
+        /******* END OF WIDGET MANAGER **********/
+    });
+    if (Notification.permission !== 'denied' ) {
+        Notification.requestPermission(function (permission) {
+            if (permission === "granted") {
+                //document.cookie="notify=true; expires=Wed, 1 Jan 2032 12:00:00 UTC";
+            }
+        });
+    }
+    function getCookie(cname) {
+        var name = cname + "=";
+        var ca = document.cookie.split(';');
+        for(var i=0; i<ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0)==' ') c = c.substring(1);
+            if (c.indexOf(name) == 0) return c.substring(name.length,c.length);
+        }
+        return "";
+    }
+</script>
+<script>
+    ga('set', '&uid', '15EC250');
+    ga('set', 'dimension1', '15EC250');
+
+    ga('send', 'pageview', '/hrms/students/adm_no/15EC250');
+</script>
+
+
+
+<ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-1" tabindex="0" style="display: none;"></ul><span role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></span></body></html>
