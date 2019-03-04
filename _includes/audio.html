@@ -1,0 +1,44 @@
+<span>Audio title: <br>
+
+{% if page.audio_link %}
+
+  <div id="bgm" class="embed-container">
+     <iframe width="560" height="315" src="https://www.youtube.com/embed/aJOTlE1K90k?feature=oembed&controls=0&hd=1&modestbranding=1&autohide=1&showinfo=0&enablejsapi=1" frameborder="0" allow="autoplay; encrypted-media;"></iframe>
+  </div>
+
+{% else %}
+      No Source Specified
+{% endif %}
+
+</span>
+  <a href="javascript:void callPlayer(&quot;bgm&quot;,&quot;playVideo&quot;)"><i class="material-icons md-dark md-36">play_arrow</i></a>
+  <a href="javascript:void callPlayer(&quot;bgm&quot;,&quot;pauseVideo&quot;)"><i class="material-icons md-dark md-36">pause</i></a>
+  <a href="javascript:void callPlayer(&quot;bgm&quot;,&quot;stopVideo&quot;)"><i class="material-icons md-dark md-36">stop</i></a>
+
+<script>
+  /*
+ * @author       Rob W (http://stackoverflow.com/a/7513356/938089
+ * @description  Executes function on a framed YouTube video (see previous link)
+ *               For a full list of possible functions, see:
+ *               https://code.google.com/apis/youtube/js_api_reference.html
+ * @param String frame_id The id of (the div containing) the frame
+ * @param String func     Desired function to call, eg. "playVideo"
+ * @param Array  args     (optional) List of arguments to pass to function func*/
+
+function callPlayer(frame_id, func, args) {
+  if (window.jQuery && frame_id instanceof jQuery) frame_id = frame_id.get(0).id;
+  var iframe = document.getElementById(frame_id);
+  if (iframe && iframe.tagName.toUpperCase() != 'IFRAME') {
+    iframe = iframe.getElementsByTagName('iframe')[0];
+  }
+  if (iframe) {
+    // Frame exists,
+    iframe.contentWindow.postMessage(JSON.stringify({
+      "event": "command",
+      "func": func,
+      "args": args || [],
+      "id": frame_id
+    }), "*");
+  }
+}
+</script>
