@@ -18,7 +18,7 @@ How come an atheist guy like me sit and listen to [Lingashtakam](https://www.you
 
 How can I love it? How can I keep that song only for the moments I feel is precious?
 
-I was a four-five-year-old kid with a sister who was seven years elder than me. We had a tiny, not so cute house with a roof made of ola(coconut leaf), and was naturally dull grey. Dad was working in a temple which was right across the muddy pathway in front of our house, and I could listen to the songs they play.
+I was a four or five year old kid, with a sister who was seven years elder than me. We had a tiny, not so cute house with a roof made of ola(coconut leaf), and was naturally dull grey. Dad was working in a temple which was right across the muddy pathway in front of our house, and I could listen to the songs they play.
 
 Dad was scary. He can get angry in a short span and he never compromised on things. Beat me a lot of times when I was a kid, and even when I was a teenager, but somehow I was more into him than my mom who was way more chill most of the times. 
 
