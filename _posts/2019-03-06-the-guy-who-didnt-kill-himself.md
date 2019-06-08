@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "The guy who did't kill himself(yet)"
+title:  "The guy who did'nt kill himself(yet)"
 author: "@viggi-v"
 ---
 <!--
